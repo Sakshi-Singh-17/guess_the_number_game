@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game - 2 Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Number Guessing Game</h1>
+
+        <div class="mode-selection" id="modeSelection">
+            <h2 style="margin-bottom: 20px; color: #333;">Select Difficulty</h2>
+            <button class="mode-btn easy-btn" onclick="startGame('easy')">Easy (10 turns)</button>
+            <button class="mode-btn hard-btn" onclick="startGame('hard')">Hard (5 turns)</button>
+        </div>
+
+        <div class="game-area" id="gameArea">
+            <div class="score-board">
+                <h3>📊 Score Board</h3>
+                <div class="player-score">
+                    Player 1: <span id="player1Score">0</span>
+                </div>
+                <div class="player-score">
+                    Player 2: <span id="player2Score">0</span>
+                </div>
+            </div>
+
+            <div class="player-turn" id="playerTurn">Player 1's Turn</div>
+
+            <div class="turns-left" id="turnsLeft">Turns remaining: 10</div>
+
+            <div class="message" id="message"></div>
+
+            <div class="input-area">
+                <input type="number" id="guessInput" min="1" max="50" placeholder="1-50">
+                <button class="submit-btn" onclick="makeGuess()">Guess</button>
+            </div>
+
+            <button class="reset-btn" id="resetBtn" onclick="resetGame()">Play Again</button>
+        </div>
+    </div>
+
+    <script src=script.js></script>
+</body>
+</html>
